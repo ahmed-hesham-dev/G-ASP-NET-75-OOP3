@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment3_OOP
 {
-    internal class InternationalShipment : Shipment
+    public class InternationalShipment : Shipment
     {
 
 
@@ -42,7 +42,7 @@ namespace Assignment3_OOP
         }
 
 
-        public decimal CustomsFee
+        public  decimal CustomsFee
         {
             get
             {
@@ -64,6 +64,26 @@ namespace Assignment3_OOP
             {
                 return DeliveryFee + (decimal)(Weight * 5) + CustomsFee;
             }
+        }
+
+
+
+        public virtual void GenerateCustomsReport()
+        {
+            Console.WriteLine("GenerateCustomsReport");
+           
+        }
+
+        public override void PrintShipment()
+        {
+            Console.WriteLine("Shipment Information");
+            Console.WriteLine("-------------------------");
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description   : {Description}");
+            Console.WriteLine($"Weight        : {Weight}");
+            Console.WriteLine($"Delivery Fee  : {DeliveryFee}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
+            Console.WriteLine($"Destination   : {Destination.GetFullAddress()}");
         }
     }
 }
