@@ -52,7 +52,6 @@ namespace Assignment3_OOP
             Console.WriteLine($"Extra Fee     : {ExtraFee}");
             Console.WriteLine($"Delivery Fee  : {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
-            Console.WriteLine($"Destination   : {Destination.GetFullAddress()}");
         }
 
     }

@@ -8,6 +8,8 @@ namespace Assignment3_OOP
         private Shipment[] shipments;
 
         public string CenterName { get; set; }
+        public Driver AssignedDriver { get; set; }
+
 
         public DeliveryCenter(string centerName)
         {

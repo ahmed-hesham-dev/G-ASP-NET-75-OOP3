@@ -84,7 +84,7 @@ namespace Assignment3_OOP
             Console.WriteLine($"Customs Fee   : {CustomsFee}");
             Console.WriteLine($"Delivery Fee  : {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
-            Console.WriteLine($"Destination   : {Destination.GetFullAddress()}");
+            Console.WriteLine($"Destination  Country  : {Destination.GetFullAddress()}");
         }
     }
 }
