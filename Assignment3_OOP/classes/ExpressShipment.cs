@@ -49,6 +49,7 @@ namespace Assignment3_OOP
             Console.WriteLine($"Tracking Code : {TrackingCode}");
             Console.WriteLine($"Description   : {Description}");
             Console.WriteLine($"Weight        : {Weight}");
+            Console.WriteLine($"Extra Fee     : {ExtraFee}");
             Console.WriteLine($"Delivery Fee  : {DeliveryFee}");
             Console.WriteLine($"Estimated Cost: {EstimatedCost}");
             Console.WriteLine($"Destination   : {Destination.GetFullAddress()}");

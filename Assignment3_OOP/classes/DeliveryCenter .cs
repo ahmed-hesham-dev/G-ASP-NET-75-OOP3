@@ -39,8 +39,11 @@ namespace Assignment3_OOP
             {
                 foreach (Shipment shipment in shipments)
                 {
-                    if (shipment.TrackingCode == trackingCode)
+                    if (shipment != null &&
+                        shipment.TrackingCode == trackingCode)
+                    {
                         return shipment;
+                    }
                 }
 
                 return default;
@@ -52,7 +55,7 @@ namespace Assignment3_OOP
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
+                if (shipments[i] == null)
                 {
                     shipments[i] = shipment;
                     return true;
@@ -67,9 +70,10 @@ namespace Assignment3_OOP
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (shipments[i].TrackingCode == trackingCode)
+                if (shipments[i] != null &&
+                    shipments[i].TrackingCode == trackingCode)
                 {
-                    shipments[i] = default;
+                    shipments[i] = null;
                     return true;
                 }
             }
@@ -80,11 +84,11 @@ namespace Assignment3_OOP
         // Print All Shipments
         public void PrintAllShipments()
         {
-            for (int i = 0; i < shipments.Length; i++)
+            foreach (Shipment shipment in shipments)
             {
-                if (!string.IsNullOrWhiteSpace(shipments[i].TrackingCode))
+                if (shipment != null)
                 {
-                    shipments[i].PrintShipment();
+                    shipment.PrintShipment();
                 }
             }
         }
